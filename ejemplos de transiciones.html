@@ -1,0 +1,90 @@
+            <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Transiciones CSS</title>
+    <style>
+        /*====================================
+        BOTÓN con transicion en hover
+        ====================================*/
+        .boton {
+            background-color: #257325; /*Color inicial*/
+            color: red;  /*Texto rojo*/
+            padding: 10px 20px;  /*Relleno fijo*/
+            border-radius: 4px; /*Bordes redondos*/
+            border: none; 
+            cursor: pointer; 
+            transition: all 0.3s ease; /*Anima TODO en 0.3 segundos*/   
+        }
+
+        .boton:hover {
+            background-color: #251094; /*Cambia a morado*/
+            transform: scale(1.05); /*Crece un 5%*/
+            box-shadow: 0 4px 12px rgba(242,3,116,o.4); /*Sombra rosada*/
+        }
+
+        /*===============================
+        ENLACE con transición en color
+        ================================*/
+        .enlace {
+            color: #657283;  /*Color inicial*/
+            text-decoration: none;
+            transition: color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .enlace:hover {
+            color: #8c4966;   /*Cambia solo el color del texto*/
+        }
+
+        /*===============================
+        CAMPO DE TEXTO con transicion en focus
+        ===============================*/
+        .campo-texto {
+            width: 50%;
+            padding: 11px 14px;
+            border: 3px solid #109DFA;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 15px;
+        }
+
+        .campo-texto:focus {
+            border-color: #2D3092;
+            box-shadow: 0 0 0 3px rgba(242,3,116,0.2);
+        }
+
+        /*==============================================
+        TARJETA con transicion en hover
+        ============================================*/
+        .tarjeta {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px; 
+            padding: 20px;
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .tarjeta:hover {
+            transform: translateY(-5); /*Se eleva 5px*/ 
+            box-shadow: 0 10px 20px rgba(0,0,0,o.15);
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de Transiciones CSS</h1>
+    <button class="boton">Botón con trqansición</button>
+    <br><br>
+
+    <a href="#" class="enlace">Enlace con transicion</a>
+    <br><br>
+
+    <input type="text" class="campo-texto" placeholder="Escribe tu nombre">
+    <br>
+
+    <div class="tarjeta">
+        <h2>Tarjeta interactiva</h2>
+        <p>Pasa el mouse por encima para ver cómo se eleva con una sombra más intensa.</p>
+    </div>
+</body>
+</html>
